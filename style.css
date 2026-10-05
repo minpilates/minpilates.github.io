@@ -105,3 +105,16 @@
 .program-card{
     min-height:220px;
 }
+/* 프로그램 6개 - 정확히 3개씩 배치 */
+section#program .program-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+}
+
+section#program .program-card {
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+}
