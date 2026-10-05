@@ -44,3 +44,32 @@
     padding: 25px !important;
     box-sizing: border-box !important;
 }
+
+/* 회원 변화 사례 - 첫 3개 사진 크기 강제 통일 */
+
+.result-grid > .result-card:nth-child(1),
+.result-grid > .result-card:nth-child(2),
+.result-grid > .result-card:nth-child(3) {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.result-grid > .result-card:nth-child(1) .result-photo,
+.result-grid > .result-card:nth-child(2) .result-photo,
+.result-grid > .result-card:nth-child(3) .result-photo {
+    width: 100% !important;
+    height: 260px !important;
+    min-height: 260px !important;
+    max-height: 260px !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+}
+
+.result-grid > .result-card:nth-child(1) .result-photo img,
+.result-grid > .result-card:nth-child(2) .result-photo img,
+.result-grid > .result-card:nth-child(3) .result-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
