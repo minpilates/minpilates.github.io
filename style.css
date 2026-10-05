@@ -67,3 +67,34 @@
     width: 100% !important;
     padding: 30px !important;
 }
+/* 키즈 · 산후 결과사진도 체형교정과 동일하게 */
+.result-card.posture-card {
+    display: block !important;
+}
+
+.result-card.posture-card .result-images {
+    display: block !important;
+}
+
+.result-card.posture-card .result-images .result-photo {
+    display: none !important;
+}
+
+.result-card.posture-card .result-images .result-photo:first-child {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.result-card.posture-card .result-images .result-photo:first-child img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+.result-card.posture-card .result-info {
+    width: 100% !important;
+    box-sizing: border-box;
+}
