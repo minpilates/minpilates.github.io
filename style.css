@@ -15,3 +15,21 @@
     object-fit: contain !important;
     display: block;
 }
+/* 체형교정 카드 - 사진 위 / 글 아래 */
+.posture-card {
+    display: block !important;
+}
+
+.posture-card .result-images {
+    display: block !important;
+}
+
+.posture-card .result-photo {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.posture-card .result-info {
+    width: 100% !important;
+    box-sizing: border-box;
+}
