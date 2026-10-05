@@ -2,144 +2,24 @@
 
 @media(max-width:480px){.analysis-grid{grid-template-columns:1fr}.buttons{flex-direction:column;max-width:220px}.hero h1{font-size:39px}.contact-buttons{flex-wrap:wrap}}
 
-/* 체형교정 결과사진 - 원본 전체 표시 */
-.result-photo {
-    height: auto !important;
-    overflow: hidden;
-}
+/* =========================
+   회원 변화 사례
+   ========================= */
 
-.result-photo img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100%;
-    object-fit: contain !important;
-    display: block;
-}
-/* 체형교정 카드 - 사진 위 / 글 아래 */
-.posture-card {
-    display: block !important;
-}
-
-.posture-card .result-images {
-    display: block !important;
-}
-
-.posture-card .result-photo {
-    width: 100% !important;
-    height: auto !important;
-}
-
-.posture-card .result-info {
-    width: 100% !important;
-    box-sizing: border-box;
-}
-
-.posture-card {
-    display: block !important;
-}
-
-.posture-card .result-images {
-    display: block !important;
-}
-
-.posture-card .result-photo {
-    width: 100% !important;
-    height: auto !important;
-}
-
-.posture-card .result-info {
-    display: block !important;
-    width: 100% !important;
-    padding: 30px !important;
-}
-/* 체형교정 카드 세로 배치 */
-.result-card.posture-card {
-    display: flex !important;
-    flex-direction: column !important;
-}
-
-.result-card.posture-card .result-photo {
-    width: 100% !important;
-    height: auto !important;
-}
-
-.result-card.posture-card .result-info {
-    width: 100% !important;
-    padding: 30px !important;
-}
-/* 키즈 · 산후 결과사진도 체형교정과 동일하게 */
-.result-card.posture-card {
-    display: block !important;
-}
-
-.result-card.posture-card .result-images {
-    display: block !important;
-}
-
-.result-card.posture-card .result-images .result-photo {
-    display: none !important;
-}
-
-.result-card.posture-card .result-images .result-photo:first-child {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-}
-
-.result-card.posture-card .result-images .result-photo:first-child img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-    display: block !important;
-}
-
-.result-card.posture-card .result-info {
-    width: 100% !important;
-    box-sizing: border-box;
-}
-/* 회원 변화 사례 3열 */
-.result-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 20px !important;
-}
-
+/* 3열 배치 */
 .result-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 20px !important;
 }
-/* 회원 사례 사진 높이 통일 */
-.result-card .result-photo {
-    width: 100% !important;
-    height: 300px !important;
-    overflow: hidden !important;
-}
 
-.result-card .result-photo img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
+/* 카드 전체 */
+.result-grid .result-card {
     display: block !important;
+    overflow: hidden;
 }
 
-/* 회원 사례 사진 - 3열 동일 비율 */
-.result-card .result-photo {
-    width: 100% !important;
-    aspect-ratio: 4 / 3 !important;
-    height: auto !important;
-    overflow: hidden !important;
-    background: #f7f7f7;
-}
-
-.result-card .result-photo img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    display: block !important;
-    margin: 0 auto !important;
-}
-/* 사례사진 크기 완전 통일 */
+/* 사진 영역 - 모든 카드 동일 크기 */
 .result-grid .result-card .result-photo {
     width: 100% !important;
     height: 260px !important;
@@ -148,9 +28,19 @@
     overflow: hidden !important;
 }
 
+/* 사진 - 동일한 영역을 꽉 채움 */
 .result-grid .result-card .result-photo img {
     width: 100% !important;
     height: 100% !important;
+    min-height: 100% !important;
+    max-height: none !important;
     object-fit: cover !important;
     display: block !important;
+}
+
+/* 글 영역 */
+.result-grid .result-card .result-info {
+    width: 100% !important;
+    padding: 25px !important;
+    box-sizing: border-box !important;
 }
