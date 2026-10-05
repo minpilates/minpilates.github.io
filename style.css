@@ -102,12 +102,7 @@
     font-size:25px;
     letter-spacing:2px;
 }
-/* 프로그램 6개 - 3열 2줄 */
-.program-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:20px;
-}
+
 
 .program-card{
     min-height:220px;
