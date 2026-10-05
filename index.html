@@ -1,177 +1,1215 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>포항 체형교정 전문 필라테스 | MIN PILATES</title>
-<meta name="description" content="포항 체형교정 전문 필라테스. 체형분석·교정, 기구필라테스, 바레 프로그램을 운영합니다.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>민필라테스 | 포항 체형교정 전문 필라테스</title>
+
+<meta name="description"
+content="포항 민필라테스. 체형분석, 자세교정, 키즈필라테스, 산전·산후필라테스, 바레 프로그램. 내 몸의 움직임을 이해하는 필라테스.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Noto Sans KR',sans-serif;
+    color:#252525;
+    background:#fff;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+    border-bottom:1px solid #eee;
+}
+
+.header-inner{
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    letter-spacing:1px;
+}
+
+.logo span{
+    font-family:'Noto Sans KR',sans-serif;
+    font-size:11px;
+    display:block;
+    letter-spacing:3px;
+    color:#777;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#8d7161;
+}
+
+.header-btn{
+    background:#252525;
+    color:white;
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:13px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:760px;
+    padding-top:76px;
+    display:flex;
+    align-items:center;
+    background:
+    radial-gradient(circle at 85% 20%,#f4e9df 0,transparent 28%),
+    linear-gradient(135deg,#faf8f5,#fff);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.eyebrow{
+    color:#967c6c;
+    font-size:13px;
+    letter-spacing:3px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:54px;
+    line-height:1.25;
+    font-weight:700;
+    letter-spacing:-2px;
+    margin-bottom:25px;
+}
+
+.hero h1 em{
+    font-style:normal;
+    color:#967c6c;
+}
+
+.hero p{
+    font-size:17px;
+    color:#666;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+}
+
+.btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:14px 25px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.btn-dark{
+    background:#252525;
+    color:white;
+}
+
+.btn-light{
+    background:white;
+    border:1px solid #ddd;
+}
+
+.hero-card{
+    height:500px;
+    border-radius:30px;
+    background:
+    linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.08)),
+    url("images/hero.jpg") center/cover;
+    box-shadow:0 25px 70px rgba(0,0,0,.12);
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-card::after{
+    content:"MIN PILATES";
+    position:absolute;
+    bottom:25px;
+    left:25px;
+    color:white;
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    letter-spacing:2px;
+}
+
+/* COMMON */
+
+section{
+    padding:110px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title .small{
+    color:#967c6c;
+    font-size:12px;
+    letter-spacing:3px;
+    font-weight:700;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin:10px 0;
+    letter-spacing:-1px;
+}
+
+.section-title p{
+    color:#777;
+}
+
+/* ABOUT */
+
+.about{
+    background:#fff;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:500px;
+    border-radius:25px;
+    background:url("images/about.jpg") center/cover;
+}
+
+.about-text h3{
+    font-size:31px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.about-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.about-list div{
+    padding:18px;
+    background:#faf8f5;
+    border-radius:14px;
+    font-weight:600;
+}
+
+/* PROGRAM */
+
+.program{
+    background:#f8f6f3;
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.program-card{
+    background:white;
+    padding:30px 22px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.program-card:hover{
+    transform:translateY(-5px);
+}
+
+.program-number{
+    color:#a58b7b;
+    font-size:13px;
+    font-weight:700;
+}
+
+.program-card h3{
+    margin:12px 0;
+}
+
+.program-card p{
+    color:#777;
+    font-size:14px;
+}
+
+/* BEFORE AFTER */
+
+.results{
+    background:#fff;
+}
+
+.result-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+}
+
+.result-card{
+    border:1px solid #eee;
+    border-radius:22px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 8px 30px rgba(0,0,0,.04);
+}
+
+.result-images{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.result-photo{
+    min-height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#eee;
+    color:#999;
+    font-size:14px;
+    overflow:hidden;
+}
+
+.result-photo img{
+    height:100%;
+    object-fit:cover;
+}
+
+.result-info{
+    padding:24px;
+}
+
+.result-info h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.result-info p{
+    color:#777;
+    font-size:14px;
+}
+
+.tag{
+    display:inline-block;
+    margin-top:13px;
+    padding:5px 12px;
+    border-radius:20px;
+    background:#f2ebe5;
+    color:#8c6e5b;
+    font-size:12px;
+}
+
+/* CASES */
+
+.cases{
+    background:#f8f6f3;
+}
+
+.case-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.case{
+    background:white;
+    padding:30px 25px;
+    border-radius:20px;
+}
+
+.case-icon{
+    font-size:30px;
+}
+
+.case h3{
+    margin:15px 0 8px;
+}
+
+.case p{
+    color:#777;
+    font-size:14px;
+}
+
+/* REVIEWS */
+
+.reviews{
+    background:#252525;
+    color:white;
+}
+
+.reviews .section-title p{
+    color:#bbb;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.review{
+    background:#333;
+    padding:30px;
+    border-radius:20px;
+}
+
+.stars{
+    color:#e4c39f;
+    margin-bottom:15px;
+}
+
+.review p{
+    color:#ddd;
+    font-size:14px;
+}
+
+.review-name{
+    margin-top:20px;
+    font-size:13px;
+    color:#aaa;
+}
+
+/* LINKS */
+
+.links{
+    text-align:center;
+}
+
+.link-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.link-button{
+    border:1px solid #ddd;
+    border-radius:30px;
+    padding:14px 28px;
+    background:white;
+    font-weight:600;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#f8f6f3;
+}
+
+.contact-box{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    border-radius:28px;
+    padding:60px 40px;
+    text-align:center;
+}
+
+.contact-box h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    color:#777;
+    margin-bottom:30px;
+}
+
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1d1d1d;
+    color:#aaa;
+    padding:40px 0;
+    font-size:12px;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.footer-logo{
+    font-family:'Playfair Display',serif;
+    color:white;
+    font-size:22px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:130px 0 70px;
+    }
+
+    .hero-grid,
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .hero h1{
+        font-size:39px;
+    }
+
+    .hero-card{
+        height:400px;
+    }
+
+    .program-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .result-grid{
+        grid-template-columns:1fr;
+    }
+
+    .case-grid,
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:75px 0;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .about-image{
+        min-height:350px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+    }
+}
+
+@media(max-width:550px){
+
+    .header-btn{
+        display:none;
+    }
+
+    .program-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .result-images{
+        grid-template-columns:1fr;
+    }
+
+    .result-photo{
+        min-height:250px;
+    }
+
+}
+
+</style>
 </head>
+
 <body>
-<header class="header">
-  <a class="logo" href="#home">MIN<span>PILATES</span></a>
-  <nav>
-    <a href="#about">ABOUT</a>
-    <a href="#program">PROGRAM</a>
-    <a href="#analysis">BODY ANALYSIS</a>
-    <a href="#barre">BARRE</a>
-    <a href="#contact">CONTACT</a>
-  </nav>
-  <a class="header-cta" href="#contact">상담예약</a>
+
+<header>
+
+<div class="container header-inner">
+
+<a href="#home" class="logo">
+MIN PILATES
+<span>POHANG BODY ALIGNMENT STUDIO</span>
+</a>
+
+<nav>
+<a href="#about">ABOUT</a>
+<a href="#program">PROGRAM</a>
+<a href="#results">MEMBER RESULTS</a>
+<a href="#cases">CASES</a>
+<a href="#reviews">REVIEW</a>
+<a href="#contact">CONTACT</a>
+</nav>
+
+<a href="#contact" class="header-btn">
+상담예약
+</a>
+
+</div>
+
 </header>
 
+
 <main>
+
+<!-- HERO -->
+
 <section id="home" class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="eyebrow">POHANG · BODY ALIGNMENT PILATES</p>
-    <h1>내 몸을 이해하는 것에서<br><em>좋은 움직임</em>이 시작됩니다.</h1>
-    <p class="hero-copy">포항 체형교정 전문 필라테스<br>기구필라테스 · 바레 · 체형분석</p>
-    <div class="buttons">
-      <a class="btn primary" href="#contact">상담 예약하기</a>
-      <a class="btn ghost" href="#about">센터 알아보기</a>
-    </div>
-  </div>
-  <div class="scroll">SCROLL ↓</div>
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="eyebrow">
+MIN PILATES · POHANG
+</div>
+
+<h1>
+내 몸을 이해하는 것부터<br>
+<em>좋은 움직임</em>이 시작됩니다.
+</h1>
+
+<p>
+단순히 운동을 따라 하는 필라테스가 아니라<br>
+회원의 체형과 움직임을 살피고<br>
+현재 몸 상태에 맞는 운동을 찾아가는 민필라테스입니다.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#results" class="btn btn-dark">
+회원 변화 사례 보기
+</a>
+
+<a href="#contact" class="btn btn-light">
+상담하기
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card"></div>
+
+</div>
+
 </section>
 
-<section id="about" class="intro section">
-  <div class="section-label">01 / ABOUT</div>
-  <div class="intro-grid">
-    <div>
-      <p class="small-title">WHY MIN PILATES</p>
-      <h2>단순히 운동을 가르치는 곳이 아니라<br><strong>몸을 먼저 이해하는 센터</strong></h2>
-    </div>
-    <div class="body-copy">
-      <p>저희는 회원님의 몸 상태와 움직임을 먼저 살펴본 뒤, 현재 필요한 운동을 찾아가는 것을 중요하게 생각합니다.</p>
-      <p>포항 민필라테스의 체형분석·교정 전문가 과정을 통해 통증 평가, 근력 평가, 관절가동범위와 체형 분석을 꾸준히 공부하고 있습니다.</p>
-      <p class="quote">“잘 움직이기 위해서는 먼저,<br>내 몸을 제대로 알아야 합니다.”</p>
-    </div>
-  </div>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<div class="container about-grid">
+
+<div class="about-image"></div>
+
+<div class="about-text">
+
+<div class="eyebrow">
+ABOUT MIN PILATES
+</div>
+
+<h3>
+운동보다 먼저<br>
+회원의 몸을 봅니다.
+</h3>
+
+<p>
+같은 동작을 해도 사람마다 움직임은 다릅니다.
+어깨의 위치, 골반의 정렬, 척추의 움직임,
+체중이 실리는 위치까지 세심하게 살펴봅니다.
+</p>
+
+<p>
+민필라테스는 회원 한 분 한 분의 현재 상태를 바탕으로
+보다 편안하고 바른 움직임을 찾아가는 것을 중요하게 생각합니다.
+</p>
+
+<div class="about-list">
+
+<div>체형 분석</div>
+<div>자세 교정</div>
+<div>움직임 평가</div>
+<div>개인별 운동 설계</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="analysis" class="dark section">
-  <div class="section-label">02 / BODY ANALYSIS</div>
-  <div class="center-title">
-    <p class="small-title">BODY ALIGNMENT</p>
-    <h2>체형분석 · 교정 전문</h2>
-    <p>머리부터 발끝까지, 몸의 연결을 살펴봅니다.</p>
-  </div>
-  <div class="analysis-grid">
-    <article><span>01</span><h3>경추·목</h3><p>경추 통증 평가<br>경장근 근력 평가</p></article>
-    <article><span>02</span><h3>어깨</h3><p>삼각근 근력 평가<br>내회전 ROM 평가</p></article>
-    <article><span>03</span><h3>흉추·허리</h3><p>흉추 움직임 평가<br>허리 통증 테스트</p></article>
-    <article><span>04</span><h3>골반·고관절</h3><p>중둔근 근력 평가<br>다리길이·골반 불균형 평가</p></article>
-    <article><span>05</span><h3>무릎·하지</h3><p>경골 ROM / 무릎 통증<br>비골 움직임 및 교정</p></article>
-    <article><span>06</span><h3>맞춤 운동</h3><p>평가 결과를 바탕으로<br>개인별 운동 방향 설정</p></article>
-  </div>
+
+<!-- PROGRAM -->
+
+<section id="program" class="program">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">PROGRAM</div>
+
+<h2>민필라테스 프로그램</h2>
+
+<p>
+목적과 현재 몸 상태에 맞춰 프로그램을 선택합니다.
+</p>
+
+</div>
+
+<div class="program-grid">
+
+<div class="program-card">
+<div class="program-number">01</div>
+<h3>체형교정</h3>
+<p>
+거북목, 굽은등, 어깨·골반 정렬 등
+회원의 움직임과 자세를 세심하게 살펴봅니다.
+</p>
+</div>
+
+<div class="program-card">
+<div class="program-number">02</div>
+<h3>키즈필라테스</h3>
+<p>
+성장기 아이들의 바른 자세 인지와
+신체 정렬, 움직임 습관을 함께 살펴봅니다.
+</p>
+</div>
+
+<div class="program-card">
+<div class="program-number">03</div>
+<h3>산전·산후</h3>
+<p>
+임신 시기와 출산 후 몸의 변화,
+현재 컨디션을 고려한 맞춤 수업을 진행합니다.
+</p>
+</div>
+
+<div class="program-card">
+<div class="program-number">04</div>
+<h3>바레</h3>
+<p>
+필라테스와 바레의 움직임을 활용해
+라인과 움직임을 함께 경험합니다.
+</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="program" class="section program">
-  <div class="section-label">03 / PROGRAM</div>
-  <div class="program-head">
-    <div><p class="small-title">EQUIPMENT PILATES</p><h2>기구필라테스</h2></div>
-    <p>리포머·체어 등 다양한 기구의 저항과 보조를 활용하여 코어, 정렬, 균형과 움직임을 세밀하게 연습합니다.</p>
-  </div>
-  <div class="program-card">
-    <div class="program-photo equipment"></div>
-    <div class="program-info">
-      <h3>정교한 움직임, 나에게 맞는 강도</h3>
-      <ul>
-        <li>코어와 몸의 중심 강화</li>
-        <li>관절 움직임과 정렬 인식</li>
-        <li>회원의 수준에 맞춘 저항 조절</li>
-        <li>체형분석 결과를 반영한 맞춤 수업</li>
-      </ul>
-    </div>
-  </div>
+
+<!-- MEMBER RESULTS -->
+
+<section id="results" class="results">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">MEMBER RESULTS</div>
+
+<h2>회원 변화 사례</h2>
+
+<p>
+사진으로 확인하는 민필라테스 회원들의 변화입니다.
+</p>
+
+</div>
+
+
+<div class="result-grid">
+
+
+<!-- KIDS -->
+
+<div class="result-card">
+
+<div class="result-images">
+
+<div class="result-photo">
+<img src="images/kids-before.jpg"
+alt="키즈필라테스 자세 변화 전">
+</div>
+
+<div class="result-photo">
+<img src="images/kids-after.jpg"
+alt="키즈필라테스 자세 변화 후">
+</div>
+
+</div>
+
+<div class="result-info">
+
+<h3>키즈필라테스 · 자세 변화</h3>
+
+<p>
+앞으로 쏠린 체중 중심, 둥근 어깨와 굽은 등에서
+보다 안정적인 정렬과 바른 자세 인지로 변화한 사례입니다.
+</p>
+
+<span class="tag">성장기 바른 자세</span>
+
+</div>
+
+</div>
+
+
+<!-- POSTPARTUM -->
+
+<div class="result-card">
+
+<div class="result-images">
+
+<div class="result-photo">
+<img src="images/postpartum-before.jpg"
+alt="산후필라테스 전">
+</div>
+
+<div class="result-photo">
+<img src="images/postpartum-after.jpg"
+alt="산후필라테스 후">
+</div>
+
+</div>
+
+<div class="result-info">
+
+<h3>산후필라테스 · 8회차</h3>
+
+<p>
+버섯목, 말린 어깨, 굽은 등과 골반 정렬을 살펴보며
+몸의 균형과 라인의 변화를 확인한 사례입니다.
+</p>
+
+<span class="tag">산후 회원 변화</span>
+
+</div>
+
+</div>
+
+
+<!-- POSTURE -->
+
+<div class="result-card">
+
+<div class="result-images">
+
+<div class="result-photo">
+<img src="images/posture-before.jpg"
+alt="체형교정 전">
+</div>
+
+<div class="result-photo">
+<img src="images/posture-after.jpg"
+alt="체형교정 후">
+</div>
+
+</div>
+
+<div class="result-info">
+
+<h3>체형교정 · 정렬 변화</h3>
+
+<p>
+목과 어깨의 위치, 척추와 골반의 정렬,
+체중 중심의 변화를 확인한 사례입니다.
+</p>
+
+<span class="tag">자세·체형교정</span>
+
+</div>
+
+</div>
+
+
+<!-- SCOLIOSIS -->
+
+<div class="result-card">
+
+<div class="result-images">
+
+<div class="result-photo">
+<img src="images/scoliosis-before.jpg"
+alt="측만 및 골반 정렬 전">
+</div>
+
+<div class="result-photo">
+<img src="images/scoliosis-after.jpg"
+alt="측만 및 골반 정렬 후">
+</div>
+
+</div>
+
+<div class="result-info">
+
+<h3>척추·골반 정렬 변화</h3>
+
+<p>
+어깨와 골반의 비대칭, 체중 중심과
+몸통 정렬의 변화를 살펴본 사례입니다.
+</p>
+
+<span class="tag">정렬·움직임</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="barre" class="section beige">
-  <div class="section-label">04 / BARRE</div>
-  <div class="barre-grid">
-    <div>
-      <p class="small-title">BARRE</p>
-      <h2>음악과 움직임,<br><strong>바레</strong></h2>
-      <p class="lead">발레의 기본 동작을 바탕으로 하체 근력과 근지구력, 균형감각을 다양하게 경험합니다.</p>
-      <div class="barre-points">
-        <div><b>01</b><span>하체 근력 · 근지구력</span></div>
-        <div><b>02</b><span>균형감각 · 자세 인식</span></div>
-        <div><b>03</b><span>리듬감 있는 즐거운 운동</span></div>
-      </div>
-    </div>
-    <div class="barre-photo"></div>
-  </div>
+
+<!-- CASES -->
+
+<section id="cases" class="cases">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">SPECIAL CASES</div>
+
+<h2>이런 분께 추천합니다</h2>
+
+<p>
+운동을 많이 하는 것보다 나에게 맞는 움직임을 찾고 싶은 분께.
+</p>
+
+</div>
+
+<div class="case-grid">
+
+<div class="case">
+<div class="case-icon">◎</div>
+<h3>거북목·굽은등</h3>
+<p>
+오랜 시간 앉아 있거나 스마트폰 사용으로
+목과 어깨가 불편한 분.
+</p>
+</div>
+
+<div class="case">
+<div class="case-icon">◌</div>
+<h3>골반·체형 불균형</h3>
+<p>
+한쪽으로 체중이 실리거나
+좌우 움직임이 다르게 느껴지는 분.
+</p>
+</div>
+
+<div class="case">
+<div class="case-icon">△</div>
+<h3>성장기 아이</h3>
+<p>
+성장기 바른 자세와 움직임 습관을
+배우고 싶은 아이.
+</p>
+</div>
+
+<div class="case">
+<div class="case-icon">♡</div>
+<h3>산전·산후 회원</h3>
+<p>
+임신과 출산으로 달라진 몸을
+현재 컨디션에 맞게 관리하고 싶은 분.
+</p>
+</div>
+
+<div class="case">
+<div class="case-icon">○</div>
+<h3>필라테스 초보</h3>
+<p>
+처음이라 어떤 동작부터 해야 할지
+막막한 분.
+</p>
+</div>
+
+<div class="case">
+<div class="case-icon">✦</div>
+<h3>바른 움직임</h3>
+<p>
+단순한 체중 감량보다
+내 몸의 움직임 자체를 개선하고 싶은 분.
+</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="compare section">
-  <div class="section-label">05 / BALANCE</div>
-  <div class="center-title">
-    <p class="small-title">PILATES + BARRE</p>
-    <h2>두 운동의 장점을 함께</h2>
-    <p>필라테스로 몸의 중심과 정렬을 세심하게 느끼고,<br>바레로 하체 근력과 균형감각을 다양하게 경험하세요.</p>
-  </div>
-  <div class="compare-grid">
-    <div><h3>기구필라테스</h3><p>코어 · 정렬 · 관절가동성<br>세밀한 움직임 · 맞춤 저항</p></div>
-    <div class="plus">+</div>
-    <div><h3>바레</h3><p>하체 근력 · 근지구력<br>균형 · 리듬감 · 운동의 재미</p></div>
-  </div>
+
+<!-- REVIEWS -->
+
+<section id="reviews" class="reviews">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">MEMBER REVIEW</div>
+
+<h2>회원님들의 이야기</h2>
+
+<p>
+민필라테스를 경험한 회원님들의 실제 후기입니다.
+</p>
+
+</div>
+
+<div class="review-grid">
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“필라테스가 처음이라 걱정했는데
+선생님이 하나하나 친절하게 알려주셔서
+생각보다 어렵지 않게 시작할 수 있었어요.”
+</p>
+
+<div class="review-name">
+필라테스 입문 회원
+</div>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“매 수업마다 컨디션을 체크해주시고
+그날 몸 상태에 맞춰 지도해주셔서
+운동하러 가는 시간이 기다려져요.”
+</p>
+
+<div class="review-name">
+회원 후기
+</div>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“처음에는 개인레슨으로 기본을 배우고
+그룹수업도 자신 있게 시작할 수 있었어요.
+선생님들이 모두 친절해서 좋았습니다.”
+</p>
+
+<div class="review-name">
+입문 회원 후기
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="education section">
-  <div class="section-label">06 / EDUCATION</div>
-  <div class="education-grid">
-    <div>
-      <p class="small-title">KEEP LEARNING</p>
-      <h2>끊임없이 배우고<br><strong>더 정확하게 지도합니다.</strong></h2>
-    </div>
-    <div>
-      <p>포항 민필라테스 체형분석·교정 전문가 과정을 통해 다양한 평가와 교정 방법을 배우고 있습니다.</p>
-      <div class="tags">
-        <span>경추 통증 평가</span><span>경장근 근력</span><span>삼각근 근력</span>
-        <span>ROM 평가</span><span>허리 통증 테스트</span><span>중둔근 근력</span>
-        <span>다리길이 평가</span><span>골반 불균형</span><span>흉추 교정</span>
-      </div>
-    </div>
-  </div>
+
+<!-- NAVER / INSTAGRAM -->
+
+<section class="links">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">MIN PILATES</div>
+
+<h2>민필라테스 더 알아보기</h2>
+
+</div>
+
+<div class="link-buttons">
+
+<a
+href="https://naver.me/xNpo4HoC"
+target="_blank"
+class="link-button">
+네이버 플레이스
+</a>
+
+<a
+href="https://www.instagram.com/min.pilates_ph"
+target="_blank"
+class="link-button">
+인스타그램
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="owner section">
-  <div class="owner-photo"></div>
-  <div class="owner-copy">
-    <p class="small-title">DIRECTOR'S MESSAGE</p>
-    <h2>회원 한 분의 몸을<br><strong>제대로 이해하는 강사</strong>가 되겠습니다.</h2>
-    <p>운동을 많이 시키는 것보다 회원님이 자신의 몸을 이해하고, 편안하고 효율적으로 움직이는 방법을 찾아가는 것이 중요하다고 생각합니다.</p>
-    <p>그래서 수업과 함께 계속 공부하고, 평가하고, 기록하며 더 나은 수업을 만들어가겠습니다.</p>
-  </div>
-</section>
+
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
-  <div>
-    <p class="eyebrow">POHANG MIN PILATES</p>
-    <h2>나에게 맞는 운동을<br><em>함께 찾아보세요.</em></h2>
-    <p>체형교정 · 기구필라테스 · 바레<br>상담을 통해 운동 목적과 현재 몸 상태를 함께 확인합니다.</p>
-  </div>
-  <div class="contact-box">
-    <div><span>PHONE</span><b>010-5266-1031</b></div>
-    <div><span>ADDRESS</span><b>포항시 북구 우창동로 107, 3층</b></div>
-    <div class="contact-buttons">
-      <a href="tel:01000000000">전화 상담</a>
-      <a href="#">네이버 예약</a>
-      <a href="#">인스타그램</a>
-    </div>
-  </div>
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="eyebrow">
+CONSULTATION
+</div>
+
+<h2>
+내 몸에 맞는 필라테스,<br>
+상담부터 시작해보세요.
+</h2>
+
+<p>
+현재 고민되는 자세와 통증, 운동 목적을 알려주시면<br>
+민필라테스에서 상담을 도와드립니다.
+</p>
+
+<div class="contact-buttons">
+
+<a
+href="https://naver.me/xNpo4HoC"
+target="_blank"
+class="btn btn-dark">
+네이버 상담예약
+</a>
+
+<a
+href="https://www.instagram.com/min.pilates_ph"
+target="_blank"
+class="btn btn-light">
+인스타그램
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+
 </main>
 
+
 <footer>
-  <div class="logo">MIN<span>PILATES</span></div>
-  <p>POHANG · BODY ALIGNMENT PILATES</p>
-  <small>© 2026 MIN PILATES. All rights reserved.</small>
+
+<div class="container footer-inner">
+
+<div>
+
+<div class="footer-logo">MIN PILATES</div>
+
+<div>
+POHANG · BODY ALIGNMENT PILATES
+</div>
+
+</div>
+
+<div>
+© MIN PILATES. All Rights Reserved.
+</div>
+
+</div>
+
 </footer>
-<script src="script.js"></script>
+
 </body>
 </html>
