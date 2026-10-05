@@ -134,3 +134,16 @@ section#program .program-card {
     min-width: 0 !important;
     margin: 0 !important;
 }
+/* HERO 최종 배치 */
+.hero-grid{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+    gap:70px !important;
+    align-items:center !important;
+    width:100% !important;
+}
+
+.hero-card{
+    width:100% !important;
+    height:500px !important;
+}
