@@ -73,3 +73,25 @@
     object-fit: cover !important;
     display: block !important;
 }
+/* 메인 대표사진 */
+.hero-card{
+    height:500px;
+    border-radius:30px;
+    background:
+        linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.08)),
+        url("images/min-pilates-main-hero.jpg") center/cover;
+    box-shadow:0 25px 70px rgba(0,0,0,.12);
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-card::after{
+    content:"MIN PILATES";
+    position:absolute;
+    bottom:25px;
+    left:25px;
+    color:white;
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    letter-spacing:2px;
+}
