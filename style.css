@@ -73,6 +73,13 @@
     object-fit: cover !important;
     display: block !important;
 }
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
 /* 메인 대표사진 */
 .hero-card{
     height:500px;
