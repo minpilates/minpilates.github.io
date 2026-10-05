@@ -109,3 +109,16 @@
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 20px !important;
 }
+/* 회원 사례 사진 높이 통일 */
+.result-card .result-photo {
+    width: 100% !important;
+    height: 300px !important;
+    overflow: hidden !important;
+}
+
+.result-card .result-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
