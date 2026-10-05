@@ -33,3 +33,22 @@
     width: 100% !important;
     box-sizing: border-box;
 }
+
+.posture-card {
+    display: block !important;
+}
+
+.posture-card .result-images {
+    display: block !important;
+}
+
+.posture-card .result-photo {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.posture-card .result-info {
+    display: block !important;
+    width: 100% !important;
+    padding: 30px !important;
+}
