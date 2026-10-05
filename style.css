@@ -98,3 +98,8 @@
     width: 100% !important;
     box-sizing: border-box;
 }
+/* 회원 변화 사례 3열 */
+.result-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+}
