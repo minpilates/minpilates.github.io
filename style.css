@@ -122,3 +122,20 @@
     object-fit: cover !important;
     display: block !important;
 }
+
+/* 회원 사례 사진 - 3열 동일 비율 */
+.result-card .result-photo {
+    width: 100% !important;
+    aspect-ratio: 4 / 3 !important;
+    height: auto !important;
+    overflow: hidden !important;
+    background: #f7f7f7;
+}
+
+.result-card .result-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
