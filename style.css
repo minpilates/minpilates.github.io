@@ -139,3 +139,18 @@
     display: block !important;
     margin: 0 auto !important;
 }
+/* 사례사진 크기 완전 통일 */
+.result-grid .result-card .result-photo {
+    width: 100% !important;
+    height: 260px !important;
+    min-height: 260px !important;
+    max-height: 260px !important;
+    overflow: hidden !important;
+}
+
+.result-grid .result-card .result-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
