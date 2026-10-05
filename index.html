@@ -119,12 +119,7 @@ nav a:hover{
     linear-gradient(135deg,#faf8f5,#fff);
 }
 
-.hero-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
+grid-template-columns
 
 .eyebrow{
     color:#967c6c;
@@ -278,7 +273,7 @@ section{
 
 .program-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
@@ -524,16 +519,12 @@ footer{
         display:none;
     }
 
-    .hero{
-        min-height:auto;
-        padding:130px 0 70px;
-    }
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
 
-    .hero-grid,
-    .about-grid{
-        grid-template-columns:1fr;
-        gap:35px;
-    }
 
     .hero h1{
         font-size:39px;
