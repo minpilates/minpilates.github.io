@@ -52,3 +52,18 @@
     width: 100% !important;
     padding: 30px !important;
 }
+/* 체형교정 카드 세로 배치 */
+.result-card.posture-card {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.result-card.posture-card .result-photo {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.result-card.posture-card .result-info {
+    width: 100% !important;
+    padding: 30px !important;
+}
