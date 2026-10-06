@@ -244,7 +244,7 @@ section{
 .about-image{
     min-height:500px;
     border-radius:25px;
-    background:url("images/about.jpg") center/cover;
+    background:url("images/about-pilates.jpg") center/cover;
 }
 
 .about-text h3{
@@ -763,6 +763,119 @@ footer{
     }
 }
 
+
+
+/* =========================================================
+   ABOUT — FINAL
+   PC     : [PHOTO] | [TEXT]
+   MOBILE : [PHOTO] ↓ [TEXT]
+   ========================================================= */
+
+.about-grid{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+    gap:70px !important;
+    align-items:center !important;
+    width:100% !important;
+}
+
+.about-image{
+    grid-column:1 !important;
+    grid-row:1 !important;
+    width:100% !important;
+    height:500px !important;
+    min-height:500px !important;
+    border-radius:25px !important;
+    background:
+        linear-gradient(rgba(0,0,0,.03),rgba(0,0,0,.03)),
+        url("images/about-pilates.jpg") center center / cover no-repeat !important;
+}
+
+.about-text{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    width:100% !important;
+    min-width:0 !important;
+}
+
+.about-text h3{
+    font-size:31px !important;
+    line-height:1.35 !important;
+    margin-bottom:20px !important;
+    word-break:keep-all !important;
+}
+
+.about-text p{
+    font-size:15px !important;
+    line-height:1.85 !important;
+    color:#666 !important;
+    margin-bottom:25px !important;
+    word-break:keep-all !important;
+}
+
+.about-list{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:15px !important;
+}
+
+/* MOBILE: photo first, text below */
+@media screen and (max-width:900px){
+
+    .about-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:stretch !important;
+        gap:30px !important;
+        width:100% !important;
+    }
+
+    .about-image{
+        order:1 !important;
+        width:100% !important;
+        height:360px !important;
+        min-height:360px !important;
+        max-height:360px !important;
+        flex:none !important;
+        border-radius:25px !important;
+    }
+
+    .about-text{
+        order:2 !important;
+        width:100% !important;
+        min-width:0 !important;
+    }
+
+    .about-text h3{
+        font-size:31px !important;
+        line-height:1.35 !important;
+    }
+
+    .about-text p{
+        font-size:15px !important;
+        line-height:1.85 !important;
+    }
+
+    .about-list{
+        grid-template-columns:1fr 1fr !important;
+        gap:12px !important;
+    }
+}
+
+@media screen and (max-width:550px){
+
+    .about-image{
+        height:300px !important;
+        min-height:300px !important;
+        max-height:300px !important;
+        border-radius:22px !important;
+    }
+
+    .about-text h3{
+        font-size:30px !important;
+    }
+}
+
 </style>
 </head>
 
@@ -1169,4 +1282,3 @@ POHANG · BODY ALIGNMENT PILATES
 </footer>
 
 </body>
-</html>
