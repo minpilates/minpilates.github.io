@@ -147,3 +147,656 @@ section#program .program-card {
     width:100% !important;
     height:500px !important;
 }
+/* =====================================================
+   MIN PILATES
+   MOBILE FINAL
+   ===================================================== */
+
+@media screen and (max-width: 800px){
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    .header{
+        height:65px;
+        padding:0 20px;
+    }
+
+    .header nav{
+        display:none;
+    }
+
+    .logo{
+        font-size:20px;
+        letter-spacing:1.5px;
+    }
+
+    .logo span{
+        font-size:8px;
+        letter-spacing:2px;
+        margin-left:5px;
+    }
+
+    .header-cta{
+        padding:6px 13px;
+        font-size:10px;
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero{
+        min-height:auto !important;
+        padding:105px 20px 55px !important;
+
+        display:block !important;
+
+        background:#f8f6f1 !important;
+        color:#292622 !important;
+    }
+
+
+    /* ★ 핵심
+       PC 2열 → 모바일 1열 */
+
+    .hero-grid{
+        display:flex !important;
+        flex-direction:column !important;
+
+        width:100% !important;
+
+        gap:30px !important;
+
+        align-items:stretch !important;
+    }
+
+
+    /* =========================
+       HERO TEXT
+       ========================= */
+
+    .hero-content{
+        width:100% !important;
+        max-width:100% !important;
+    }
+
+    .eyebrow{
+        font-size:9px;
+        letter-spacing:2.5px;
+    }
+
+    .hero h1{
+        font-family:"Playfair Display","Noto Sans KR",serif;
+
+        font-size:40px !important;
+        line-height:1.25 !important;
+
+        letter-spacing:-2px !important;
+
+        font-weight:500;
+
+        margin:16px 0 22px !important;
+
+        word-break:keep-all;
+    }
+
+    .hero h1 em{
+        color:#9b8878 !important;
+        font-style:normal;
+    }
+
+    .hero-copy{
+        font-size:15px !important;
+        line-height:1.85 !important;
+
+        font-weight:400;
+
+        color:#665f57 !important;
+
+        max-width:100%;
+
+        word-break:keep-all;
+    }
+
+
+    /* =========================
+       BUTTON
+       ========================= */
+
+    .buttons{
+        display:flex !important;
+        flex-direction:row !important;
+
+        gap:9px !important;
+
+        margin-top:25px !important;
+
+        max-width:none !important;
+    }
+
+    .btn{
+        padding:11px 20px !important;
+
+        font-size:11px !important;
+
+        border:1px solid #292622 !important;
+
+        white-space:nowrap;
+    }
+
+    .btn.primary{
+        background:#292622 !important;
+        color:#fff !important;
+    }
+
+
+    /* =========================
+       HERO IMAGE
+       ========================= */
+
+    .hero-card{
+        width:100% !important;
+
+        height:380px !important;
+        min-height:380px !important;
+        max-height:380px !important;
+
+        margin:0 !important;
+
+        border-radius:28px !important;
+
+        overflow:hidden !important;
+
+        background-position:center center !important;
+
+        box-shadow:0 15px 40px rgba(0,0,0,.10) !important;
+    }
+
+    .hero-card::after{
+        left:22px !important;
+        bottom:20px !important;
+
+        font-size:21px !important;
+        letter-spacing:2px !important;
+    }
+
+
+    /* =========================
+       SCROLL
+       ========================= */
+
+    .scroll{
+        display:none !important;
+    }
+
+
+    /* =========================
+       SECTION
+       ========================= */
+
+    .section{
+        padding:75px 20px !important;
+    }
+
+    .section-label{
+        font-size:9px;
+        letter-spacing:2.5px;
+
+        margin-bottom:32px;
+    }
+
+
+    /* =========================
+       SECTION TITLE
+       ========================= */
+
+    .intro h2,
+    .education h2,
+    .program h2,
+    .barre h2,
+    .owner h2{
+
+        font-size:34px !important;
+
+        line-height:1.35 !important;
+
+        letter-spacing:-1.5px;
+
+        word-break:keep-all;
+    }
+
+    .center-title h2{
+        font-size:34px !important;
+
+        line-height:1.35 !important;
+
+        letter-spacing:-1.5px;
+
+        word-break:keep-all;
+    }
+
+
+    /* =========================
+       BODY TEXT
+       ========================= */
+
+    .body-copy,
+    .lead{
+
+        font-size:15px !important;
+
+        line-height:1.85 !important;
+
+        word-break:keep-all;
+    }
+
+    .quote{
+        font-size:20px;
+
+        line-height:1.55;
+
+        word-break:keep-all;
+    }
+
+
+    /* =========================
+       INTRO
+       ========================= */
+
+    .intro-grid,
+    .education-grid{
+
+        grid-template-columns:1fr !important;
+
+        gap:35px !important;
+    }
+
+
+    /* =========================
+       ANALYSIS
+       ========================= */
+
+    .analysis-grid{
+
+        grid-template-columns:1fr !important;
+
+        margin-top:45px !important;
+    }
+
+    .analysis-grid article{
+
+        padding:27px 22px !important;
+
+        min-height:auto !important;
+    }
+
+    .analysis-grid h3{
+        font-size:18px;
+    }
+
+    .analysis-grid p{
+        font-size:13px;
+
+        line-height:1.7;
+    }
+
+
+    /* =========================
+       PROGRAM
+       ========================= */
+
+    .program-head{
+
+        grid-template-columns:1fr !important;
+
+        gap:20px !important;
+    }
+
+    .program-card{
+
+        display:block !important;
+
+        margin-top:30px !important;
+
+        min-height:0 !important;
+    }
+
+    .program-photo{
+
+        min-height:280px !important;
+
+        height:280px !important;
+    }
+
+    .program-info{
+
+        padding:30px 22px !important;
+    }
+
+    .program-info h3{
+
+        font-size:27px !important;
+    }
+
+    .program-info li{
+
+        margin:12px 0;
+
+        font-size:14px;
+    }
+
+
+    /* =========================
+       PROGRAM 6 CARDS
+       ========================= */
+
+    section#program .program-grid{
+
+        display:grid !important;
+
+        grid-template-columns:1fr !important;
+
+        gap:15px !important;
+    }
+
+    section#program .program-card{
+
+        width:100% !important;
+
+        max-width:100% !important;
+
+        min-width:0 !important;
+
+        flex:none !important;
+
+        margin:0 !important;
+    }
+
+
+    /* =========================
+       BARRE
+       ========================= */
+
+    .barre-grid{
+
+        grid-template-columns:1fr !important;
+
+        gap:35px !important;
+    }
+
+    .barre-photo{
+
+        min-height:360px !important;
+
+        height:360px !important;
+    }
+
+    .barre-points{
+
+        margin-top:28px;
+    }
+
+
+    /* =========================
+       COMPARE
+       ========================= */
+
+    .compare-grid{
+
+        grid-template-columns:1fr !important;
+
+        gap:12px !important;
+
+        margin-top:45px;
+    }
+
+    .compare-grid>div:not(.plus){
+
+        padding:32px 20px !important;
+    }
+
+    .compare-grid h3{
+
+        font-size:25px;
+    }
+
+    .plus{
+
+        transform:rotate(90deg);
+
+        font-size:27px;
+    }
+
+
+    /* =========================
+       EDUCATION
+       ========================= */
+
+    .education-grid{
+
+        grid-template-columns:1fr !important;
+
+        gap:35px !important;
+    }
+
+    .tags{
+
+        gap:6px;
+    }
+
+    .tags span{
+
+        padding:6px 10px;
+
+        font-size:10px;
+    }
+
+
+    /* =========================
+       OWNER
+       ========================= */
+
+    .owner{
+
+        grid-template-columns:1fr !important;
+
+        gap:35px !important;
+    }
+
+    .owner-photo{
+
+        height:400px !important;
+
+        min-height:400px !important;
+    }
+
+
+    /* =========================
+       회원 변화 사례
+       ========================= */
+
+    .result-grid{
+
+        display:grid !important;
+
+        grid-template-columns:1fr !important;
+
+        gap:18px !important;
+    }
+
+    .result-grid .result-card{
+
+        width:100% !important;
+    }
+
+    .result-grid .result-card .result-photo{
+
+        width:100% !important;
+
+        height:260px !important;
+
+        min-height:260px !important;
+
+        max-height:260px !important;
+    }
+
+    .result-grid .result-card .result-photo img{
+
+        width:100% !important;
+
+        height:100% !important;
+
+        object-fit:cover !important;
+    }
+
+    .result-grid .result-card .result-info{
+
+        padding:22px !important;
+    }
+
+
+    /* =========================
+       CONTACT
+       ========================= */
+
+    .contact{
+
+        padding:75px 20px !important;
+
+        grid-template-columns:1fr !important;
+
+        gap:35px !important;
+    }
+
+    .contact h2{
+
+        font-size:40px !important;
+
+        line-height:1.3 !important;
+
+        letter-spacing:-1px;
+
+        word-break:keep-all;
+    }
+
+    .contact-box>div{
+
+        padding:17px 0;
+    }
+
+    .contact-buttons{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        gap:8px;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer{
+
+        padding:30px 20px !important;
+
+        display:block !important;
+    }
+
+    footer p,
+    footer small{
+
+        display:block;
+
+        margin-top:10px;
+    }
+}
+
+
+/* =====================================================
+   작은 휴대폰
+   ===================================================== */
+
+@media screen and (max-width:480px){
+
+    .hero{
+
+        padding:95px 20px 45px !important;
+    }
+
+    .hero h1{
+
+        font-size:37px !important;
+
+        line-height:1.28 !important;
+
+        letter-spacing:-2px !important;
+    }
+
+    .hero-copy{
+
+        font-size:15px !important;
+
+        line-height:1.85 !important;
+    }
+
+    .buttons{
+
+        margin-top:23px !important;
+    }
+
+    .btn{
+
+        padding:10px 18px !important;
+    }
+
+    .hero-card{
+
+        height:350px !important;
+
+        min-height:350px !important;
+
+        max-height:350px !important;
+
+        border-radius:25px !important;
+    }
+
+    .hero-card::after{
+
+        left:20px !important;
+
+        bottom:18px !important;
+
+        font-size:20px !important;
+    }
+
+    .section{
+
+        padding:65px 20px !important;
+    }
+
+    .intro h2,
+    .education h2,
+    .program h2,
+    .barre h2,
+    .owner h2,
+    .center-title h2{
+
+        font-size:31px !important;
+    }
+
+    .contact{
+
+        padding:65px 20px !important;
+    }
+
+    .contact h2{
+
+        font-size:36px !important;
+    }
+}
