@@ -91,6 +91,26 @@
     position:relative;
     overflow:hidden;
 }
+/* 모바일에서는 대표사진을 글 아래로 */
+@media (max-width:800px){
+
+    .hero-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:30px !important;
+    }
+
+    .hero-grid > div:first-child{
+        width:100% !important;
+    }
+
+    .hero-card{
+        width:100% !important;
+        height:360px !important;
+        min-height:360px !important;
+        margin:0 !important;
+    }
+}
 
 .hero-card::after{
     content:"MIN PILATES";
