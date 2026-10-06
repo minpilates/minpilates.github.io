@@ -620,7 +620,7 @@ footer{
 
 /* PC / tablet */
 .hero{
-    min-height:760px !important;
+    min-height:680px !important;
     padding-top:76px !important;
     display:flex !important;
     align-items:center !important;
@@ -629,9 +629,11 @@ footer{
 .hero-grid{
     display:grid !important;
     grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
-    gap:70px !important;
+    gap:60px !important;
     align-items:center !important;
-    width:100% !important;
+    width:min(1180px,92%) !important;
+    max-width:1180px !important;
+    margin:0 auto !important;
 }
 
 .hero-grid > div:first-child{
@@ -686,6 +688,7 @@ footer{
         justify-content:flex-start !important;
         gap:30px !important;
         width:100% !important;
+        max-width:none !important;
         margin:0 auto !important;
     }
 
