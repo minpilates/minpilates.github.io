@@ -244,7 +244,7 @@ section{
 .about-image{
     min-height:500px;
     border-radius:25px;
-    background:url("images/about.jpg") center/cover;
+    background:url("images/about-pilates.jpg") center/cover;
 }
 
 .about-text h3{
@@ -652,7 +652,7 @@ footer{
     order:2 !important;
     background:
         linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.08)),
-        url("images/min-pilates-main-hero.png") center center / contain no-repeat !important;
+        url("images/min-pilates-main-hero.png") center/cover no-repeat !important;
     border-radius:30px !important;
     position:relative !important;
     overflow:hidden !important;
@@ -742,8 +742,6 @@ footer{
         flex:0 0 auto !important;
         border-radius:25px !important;
         background-position:center center !important;
-        background-size:contain !important;
-        background-repeat:no-repeat !important;
     }
 }
 
@@ -790,14 +788,16 @@ footer{
     min-height:500px !important;
     border-radius:25px !important;
 
-    /* about.jpg가 있으면 우선 사용하고,
-       없으면 현재 사용 중인 메인 사진을 표시 */
-    background-image:
-        url("images/about.jpg"),
-        url("images/min-pilates-main-hero.png") !important;
-    background-position:center center !important;
-    background-size:cover !important;
-    background-repeat:no-repeat !important;
+    background:none !important;
+    overflow:hidden !important;
+}
+
+.about-image img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center center !important;
 }
 
 .about-text{
@@ -893,21 +893,47 @@ footer{
 }
 
 
-/* HERO IMAGE — FINAL: show the original image once, without cropping or repeating */
-.hero-card{
-    background-image:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.08)), url("images/min-pilates-main-hero.png") !important;
-    background-position:center center !important;
-    background-size:contain !important;
-    background-repeat:no-repeat !important;
+
+/* =========================================================
+   CONTACT — FINAL TYPOGRAPHY
+   PC / MOBILE : 문장 단위 줄바꿈 + 한글 단어 분리 방지
+   ========================================================= */
+.contact-box h2{
+    font-size:36px !important;
+    line-height:1.45 !important;
+    margin:0 0 20px !important;
+    word-break:keep-all !important;
+    overflow-wrap:normal !important;
+    white-space:normal !important;
 }
 
-@media screen and (max-width:900px){
-    .hero-card{
-        background-position:center center !important;
-        background-size:contain !important;
-        background-repeat:no-repeat !important;
+.contact-box p{
+    font-size:15px !important;
+    line-height:1.9 !important;
+    word-break:keep-all !important;
+    overflow-wrap:normal !important;
+}
+
+@media screen and (max-width:550px){
+    .contact-box{
+        padding:55px 24px !important;
+        border-radius:28px !important;
+    }
+
+    .contact-box h2{
+        font-size:30px !important;
+        line-height:1.5 !important;
+        letter-spacing:-0.03em !important;
+        word-break:keep-all !important;
+    }
+
+    .contact-box p{
+        font-size:14px !important;
+        line-height:1.9 !important;
+        word-break:keep-all !important;
     }
 }
+
 </style>
 </head>
 
@@ -985,7 +1011,7 @@ MIN PILATES · POHANG
 
 <div class="container about-grid">
 
-<div class="about-image"></div>
+<div class="about-image"><img src="images/about-pilates.jpg?v=2" alt="민필라테스 자세교정 수업"></div>
 
 <div class="about-text">
 
@@ -1044,7 +1070,7 @@ ABOUT MIN PILATES
 
     <p class="program-guide">
 ▼ ▼카드를 클릭하면 관련 블로그로 연결됩니다▼ ▼
-
+  
 </p>
     
 </div>
