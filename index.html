@@ -771,15 +771,11 @@ footer{
    MOBILE : PHOTO TOP / TEXT BELOW
    ========================================================= */
 
-/* PC — 여백을 줄이고 사진 원본 비율 유지 */
-.about{
-    padding:80px 0 !important;
-}
-
+/* PC */
 .about-grid{
     display:grid !important;
     grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
-    gap:50px !important;
+    gap:70px !important;
     align-items:center !important;
     width:100% !important;
 }
@@ -788,9 +784,10 @@ footer{
     grid-column:1 !important;
     grid-row:1 !important;
     width:100% !important;
-    height:auto !important;
-    min-height:0 !important;
+    height:500px !important;
+    min-height:500px !important;
     border-radius:25px !important;
+
     background:none !important;
     overflow:hidden !important;
 }
@@ -798,8 +795,8 @@ footer{
 .about-image img{
     display:block !important;
     width:100% !important;
-    height:auto !important;
-    object-fit:initial !important;
+    height:100% !important;
+    object-fit:contain !important;
     object-position:center center !important;
 }
 
@@ -835,23 +832,19 @@ footer{
 /* MOBILE — 사진이 먼저, 글이 아래 */
 @media screen and (max-width:900px){
 
-    .about{
-        padding:60px 0 !important;
-    }
-
     .about-grid{
         display:flex !important;
         flex-direction:column !important;
         align-items:stretch !important;
-        gap:30px !important;
+        gap:35px !important;
         width:100% !important;
     }
 
     .about-image{
         order:1 !important;
         width:100% !important;
-        height:auto !important;
-        min-height:0 !important;
+        height:350px !important;
+        min-height:350px !important;
         border-radius:25px !important;
         flex:none !important;
     }
@@ -884,13 +877,9 @@ footer{
         gap:28px !important;
     }
 
-    .about{
-        padding:50px 0 !important;
-    }
-
     .about-image{
-        height:auto !important;
-        min-height:0 !important;
+        height:300px !important;
+        min-height:300px !important;
         border-radius:22px !important;
     }
 
@@ -942,6 +931,18 @@ footer{
         font-size:14px !important;
         line-height:1.9 !important;
         word-break:keep-all !important;
+    }
+}
+
+
+/* =========================================================
+   ABOUT — PC PHOTO SLIGHTLY SMALLER
+   MOBILE IS UNCHANGED
+   ========================================================= */
+@media screen and (min-width:901px){
+    .about-image{
+        width:90% !important;
+        justify-self:start !important;
     }
 }
 
