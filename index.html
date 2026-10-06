@@ -766,9 +766,9 @@ footer{
 
 
 /* =========================================================
-   ABOUT — FINAL
-   PC     : [PHOTO] | [TEXT]
-   MOBILE : [PHOTO] ↓ [TEXT]
+   ABOUT — FINAL, SHOW FULL IMAGE
+   PC     : [FULL PHOTO] | [TEXT]
+   MOBILE : [FULL PHOTO] ↓ [TEXT]
    ========================================================= */
 
 .about-grid{
@@ -783,12 +783,20 @@ footer{
     grid-column:1 !important;
     grid-row:1 !important;
     width:100% !important;
-    height:500px !important;
-    min-height:500px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    overflow:hidden !important;
     border-radius:25px !important;
-    background:
-        linear-gradient(rgba(0,0,0,.03),rgba(0,0,0,.03)),
-        url("images/about-pilates.jpg") center center / cover no-repeat !important;
+    background:#3a302b !important;
+}
+
+.about-image img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    max-width:100% !important;
+    object-fit:contain !important;
 }
 
 .about-text{
@@ -819,7 +827,6 @@ footer{
     gap:15px !important;
 }
 
-/* MOBILE: photo first, text below */
 @media screen and (max-width:900px){
 
     .about-grid{
@@ -833,11 +840,17 @@ footer{
     .about-image{
         order:1 !important;
         width:100% !important;
-        height:360px !important;
-        min-height:360px !important;
-        max-height:360px !important;
+        height:auto !important;
+        min-height:0 !important;
+        max-height:none !important;
         flex:none !important;
         border-radius:25px !important;
+    }
+
+    .about-image img{
+        width:100% !important;
+        height:auto !important;
+        object-fit:contain !important;
     }
 
     .about-text{
@@ -865,10 +878,14 @@ footer{
 @media screen and (max-width:550px){
 
     .about-image{
-        height:300px !important;
-        min-height:300px !important;
-        max-height:300px !important;
-        border-radius:22px !important;
+        width:100% !important;
+        height:auto !important;
+        min-height:0 !important;
+    }
+
+    .about-image img{
+        width:100% !important;
+        height:auto !important;
     }
 
     .about-text h3{
@@ -953,7 +970,7 @@ MIN PILATES · POHANG
 
 <div class="container about-grid">
 
-<div class="about-image"></div>
+<div class="about-image"><img src="images/about-pilates.jpg" alt="민필라테스 회원 자세 변화"></div>
 
 <div class="about-text">
 
@@ -1282,3 +1299,4 @@ POHANG · BODY ALIGNMENT PILATES
 </footer>
 
 </body>
+</html>
