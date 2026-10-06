@@ -1040,6 +1040,66 @@ footer{
     }
 }
 
+
+/* =========================================================
+   PC — HERO / ABOUT 사진을 같은 카드 규격으로 통일
+   모바일은 기존 설정 그대로 유지
+   ========================================================= */
+@media screen and (min-width:901px){
+
+    /* 두 섹션의 컨테이너 폭을 동일하게 */
+    .hero-grid,
+    .about-grid{
+        width:min(1180px,92%) !important;
+        max-width:1180px !important;
+        margin-left:auto !important;
+        margin-right:auto !important;
+    }
+
+    /* 두 사진 카드 자체를 완전히 동일한 규격으로 */
+    .hero-card,
+    .about-image{
+        width:460px !important;
+        height:420px !important;
+        min-height:420px !important;
+        max-width:460px !important;
+        max-height:420px !important;
+        border-radius:25px !important;
+        overflow:hidden !important;
+        justify-self:center !important;
+        margin:0 auto !important;
+        box-sizing:border-box !important;
+    }
+
+    /* HERO 사진은 카드 안에서 전체가 보이도록 */
+    .hero-card{
+        background-position:center center !important;
+        background-size:contain !important;
+        background-repeat:no-repeat !important;
+    }
+
+    /* ABOUT 사진도 HERO와 같은 카드 규격 */
+    .about-image img{
+        display:block !important;
+        width:100% !important;
+        height:100% !important;
+        object-fit:contain !important;
+        object-position:center center !important;
+    }
+
+    /* 두 섹션의 사진과 글 사이 간격도 동일 */
+    .hero-grid,
+    .about-grid{
+        column-gap:50px !important;
+    }
+}
+
+
+/* PC HERO 제목: 마지막 '다.'가 홀로 내려가지 않도록 */
+@media screen and (min-width:901px){
+ .hero h1{font-size:clamp(34px,2.65vw,43px) !important;letter-spacing:-1.7px !important;}
+ .hero-title-second{display:block;white-space:nowrap;}
+}
 </style>
 </head>
 
@@ -1086,7 +1146,7 @@ MIN PILATES · POHANG
 
 <h1>
 내 몸을 이해하는 것부터<br>
-<em>좋은 움직임</em>이 시작됩니다.
+<span class="hero-title-second"><em>좋은 움직임</em>이 시작됩니다.</span>
 </h1>
 
 <p>
@@ -1445,5 +1505,7 @@ POHANG · BODY ALIGNMENT PILATES
 
 </footer>
 
+</body>
+</html>
 </body>
 </html>
