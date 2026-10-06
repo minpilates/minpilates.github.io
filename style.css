@@ -137,8 +137,8 @@ section#program .program-card {
 /* HERO 최종 배치 */
 .hero-grid{
     display:grid !important;
-    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
-    gap:70px !important;
+     display:flex !important;
+    flex-direction:column !important;
     align-items:center !important;
     width:100% !important;
 }
